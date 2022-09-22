@@ -18,7 +18,7 @@ from geopandas import GeoDataFrame as gdf
 from shapely.geometry import Point, Polygon, LineString
 
 # Define paths
-data_path = os.getenv('DATA_PATH', r"C:\Users\nob40\OneDrive - Newcastle University\019 - Paul Outputs\data-inputs")
+data_path = os.getenv('DATA_PATH', '/data')
 inputs_path = os.path.join(data_path, 'inputs')
 outputs_path = os.path.join(data_path, 'outputs')
 if not os.path.exists(outputs_path):
@@ -29,7 +29,7 @@ output_file = os.path.join(outputs_path, 'features.gpkg')
 uprn_lookup = glob.glob(os.path.join(inputs_path, 'uprn', '*.csv'))
 dd_curves = os.path.join(inputs_path, 'dd-curves')
 
-threshold = float(0.3)
+threshold = float(os.getenv('THRESHOLD'))
 
 # Set buffer around buildings
 buffer = 5
