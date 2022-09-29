@@ -18,7 +18,7 @@ python build_docs.py
 [environment.yml](https://github.com/OpenCLIM/Flood-Impact-Model-V2/blob/master/environment.yml)
 
 ## Usage 
-`docker build -t Flood-Impact-Model-V2 . && docker run -v "data:/data" --env PYTHONUNBUFFERED=1 --env THRESHOLD=0.1 --name Flood-Impact-Model-V2 Flood-Impact-Model-V2 `
+`docker build -t flood-impact-model-v2 . && docker run -v "data:/data" --env PYTHONUNBUFFERED=1 --env THRESHOLD=0.1 --name flood-impact-model-v2 flood-impact-model-v2 `
 
 or
 
