@@ -9,6 +9,7 @@ from shapely.geometry import shape
 import glob
 import pandas as pd
 from osgeo import gdal
+import matplotlib
 import matplotlib.pyplot as plt
 import math
 from tabulate import tabulate
