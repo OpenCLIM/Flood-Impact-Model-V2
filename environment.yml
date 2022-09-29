@@ -6,3 +6,4 @@ dependencies:
   - pip:
       - rasterstats==0.15.0
   - matplotlib
+  - tabulate
