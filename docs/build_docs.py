@@ -12,7 +12,7 @@ dataslots = inputs['dataslots']
 metadata = definition['metadata']
 outputs = spec['outputs']['datasets']
 
-s = f'## Flood Impact Model V2\n\n{metadata["description"]}'
+s = f'## flood impact model v2\n\n{metadata["description"]}'
 
 s += '\n\n## Parameters\n\n'
 
