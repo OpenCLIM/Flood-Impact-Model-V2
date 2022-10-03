@@ -85,8 +85,8 @@ with rio.open(os.path.join(inputs_path, 'run/max_depth.tif')) as max_depth,\
                                   all_touched=True, nodata=max_vd_product.nodata)]                       
                                    
     #Calculate damage
-    residential = pd.read_csv(os.path.join(dd_curves, 'residential_original.csv'))
-    nonresidential = pd.read_csv(os.path.join(dd_curves, 'nonresidential_original.csv'))
+    residential = pd.read_csv(os.path.join(dd_curves, 'residential.csv'))
+    nonresidential = pd.read_csv(os.path.join(dd_curves, 'nonresidential.csv'))
 
     buildings['damage'] = (np.interp(
         buildings.depth, residential.depth, residential.damage) * buildings.original_area).round(0)
