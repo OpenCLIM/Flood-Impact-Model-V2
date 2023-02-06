@@ -105,7 +105,7 @@ with rio.open(os.path.join(inputs_path, 'run/max_depth.tif')) as max_depth:
     buildings['damage'] = (np.interp(
         buildings.depth, residential.depth, residential.damage) * buildings.original_area).round(0)
     buildings['damage'] = buildings['damage'].where(
-        buildings.building_use != 'residential', (np.interp(
+        buildings.building_u!= 'residential', (np.interp(
             buildings.depth, nonresidential.depth, nonresidential.damage
         ) * buildings.original_area).round(0)).astype(int)
 
