@@ -193,9 +193,9 @@ print('building centroids calculated')
 # For each grid cell, determine how many buildings fall within the cell
 for i in range(0,len(grid)-1):
     for j in range (0, len(building_centroid)-1):
-            if building_centroid.geometry[j].within(grid.geometry[i]):
+        if building_centroid.geometry[j].within(grid.geometry[i]):
             # Establish total cost of damage per cell
-                grid.Total_Cost[i] +=building_centroid.damage[j]
+            grid.Total_Cost[i] +=building_centroid.damage[j]
             # Establish the number of building types within the cell
             if building_centroid.building_u[j]=='residential':
                 grid.Residential_Count[i] +=1
@@ -207,6 +207,7 @@ for i in range(0,len(grid)-1):
                 grid.Unclassified_Count[i] +=1
             else:
                 grid.Unknown_Count[i] +=1
+
 
 print('count on impacted buildings per cell')
 
